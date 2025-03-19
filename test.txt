@@ -1,0 +1,137 @@
+ Step welcome
+    Speak $name(text) + "您好，请问有什么可以帮您?"
+    Listen 10
+    Branch 投诉 complainProc
+    Branch 账单 billProc
+    Branch 查余额 balanceProc
+    Branch 查流量 trafficProc
+    Branch 充值 buyProc
+    Branch 充流量 chargeProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 买 buyProc
+    Silence silenceProc
+    Default defaultProc
+
+ Step balanceProc
+    Speak "您的余额是" + $balance + "元，请问还需要什么服务？"
+    Listen 10
+    Branch 投诉 complainProc
+    Branch 账单 billProc
+    Branch 查余额 balanceProc
+    Branch 查流量 trafficProc
+    Branch 充值 buyProc
+    Branch 充流量 chargeProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 买 buyProc
+    Silence silenceProc
+    Default defaultProc
+
+ Step complainProc
+    Speak "您的意见是我们改进工作的动力，请问您还有什么补充?"
+    Listen 10
+    Branch 投诉 complainProc
+    Branch 账单 billProc
+    Branch 查余额 balanceProc
+    Branch 查流量 trafficProc
+    Branch 充值 buyProc
+    Branch 充流量 chargeProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 买 buyProc
+    Silence silenceProc
+    Default defaultProc
+
+ Step exitProc
+    Speak "感谢您的来电，再见"
+    Exit
+
+ Step billProc
+    Speak "您的本月账单是" + $bill + "元，请问还需要什么服务？"
+    Branch 投诉 complainProc
+    Branch 账单 billProc
+    Branch 查余额 balanceProc
+    Branch 查流量 trafficProc
+    Branch 充值 buyProc
+    Branch 充流量 chargeProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 买 buyProc
+    Silence silenceProc
+    Default defaultProc
+    
+ Step trafficProc
+    Speak "您的本月流量费用是" + $traffic + "元，请问还需要什么服务？"
+    Listen 10
+    Branch 投诉 complainProc
+    Branch 账单 billProc
+    Branch 查余额 balanceProc
+    Branch 查流量 trafficProc
+    Branch 充值 buyProc
+    Branch 充流量 chargeProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 买 buyProc
+    Silence silenceProc
+    Default defaultProc
+
+ Step buyProc
+    Speak "您的购买金额是" + $buy + "元，请问还需要什么服务？"
+    Listen 10
+    Branch 投诉 complainProc
+    Branch 账单 billProc
+    Branch 查余额 balanceProc
+    Branch 查流量 trafficProc
+    Branch 充值 buyProc
+    Branch 充流量 chargeProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 买 buyProc
+    Silence silenceProc
+    Default defaultProc
+
+ Step chargeProc
+    Speak "您已充值流量" + $charge + "GB，请问还需要什么服务？"
+    Listen 10
+    Branch 投诉 complainProc
+    Branch 账单 billProc
+    Branch 查余额 balanceProc
+    Branch 查流量 trafficProc
+    Branch 充值 buyProc
+    Branch 充流量 chargeProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 买 buyProc
+    Silence silenceProc
+    Default defaultProc
+
+ Step silenceProc
+    Speak "听不清，请您大声一点可以吗"
+    Listen 10
+    Branch 投诉 complainProc
+    Branch 账单 billProc
+    Branch 查余额 balanceProc
+    Branch 查流量 trafficProc
+    Branch 充值 buyProc
+    Branch 充流量 chargeProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 买 buyProc
+    Silence silenceProc
+    Default defaultProc
+
+ Step defaultProc
+    Speak "抱歉，我不明白你的意思，请您再说一遍"
+    Listen 10
+    Branch 投诉 complainProc
+    Branch 账单 billProc
+    Branch 查余额 balanceProc
+    Branch 查流量 trafficProc
+    Branch 充值 buyProc
+    Branch 充流量 chargeProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 买 buyProc
+    Silence silenceProc
+    Default defaultProc

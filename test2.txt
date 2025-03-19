@@ -1,0 +1,107 @@
+Step welcome
+    Speak $name + "您好，欢迎光临，请问有什么可以帮助您？"
+    Listen 10
+    Branch 订单 orderProc
+    Branch 查询查询 queryProc
+    Branch 修改信息 updateProc
+    Branch 退款 refundProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 帮助 helpProc
+    Silence silenceProc
+    Default defaultProc
+
+Step orderProc
+    Speak "您的订单号是" + $orderID + "，请问您需要什么帮助？"
+    Listen 10
+    Branch 订单 orderProc
+    Branch 查询查询 queryProc
+    Branch 修改信息 updateProc
+    Branch 退款 refundProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 帮助 helpProc
+    Silence silenceProc
+    Default defaultProc
+
+Step queryProc
+    Speak "正在查询您的请求，稍等片刻..."
+    Listen 10
+    Branch 订单 orderProc
+    Branch 查询查询 queryProc
+    Branch 修改信息 updateProc
+    Branch 退款 refundProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 帮助 helpProc
+    Silence silenceProc
+    Default defaultProc
+
+Step updateProc
+    Speak "请输入您想修改的信息，我们将为您更新。"
+    Listen 10
+    Branch 订单 orderProc
+    Branch 查询查询 queryProc
+    Branch 修改信息 updateProc
+    Branch 退款 refundProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 帮助 helpProc
+    Silence silenceProc
+    Default defaultProc
+
+Step refundProc
+    Speak "请提供您的退款申请，我们会尽快处理。"
+    Listen 10
+    Branch 订单 orderProc
+    Branch 查询查询 queryProc
+    Branch 修改信息 updateProc
+    Branch 退款 refundProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 帮助 helpProc
+    Silence silenceProc
+    Default defaultProc
+
+Step exitProc
+    Speak "感谢您的使用，再见！"
+    Exit
+
+Step helpProc
+    Speak "如果您需要帮助，请提供更多详细信息，我们将尽快为您处理。"
+    Listen 10
+    Branch 订单 orderProc
+    Branch 查询查询 queryProc
+    Branch 修改信息 updateProc
+    Branch 退款 refundProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 帮助 helpProc
+    Silence silenceProc
+    Default defaultProc
+
+Step silenceProc
+    Speak "听不清，请您再说一遍，谢谢！"
+    Listen 10
+    Branch 订单 orderProc
+    Branch 查询查询 queryProc
+    Branch 修改信息 updateProc
+    Branch 退款 refundProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 帮助 helpProc
+    Silence silenceProc
+    Default defaultProc
+
+Step defaultProc
+    Speak "抱歉，我没能理解您的问题，请再说一次。"
+    Listen 10
+    Branch 订单 orderProc
+    Branch 查询查询 queryProc
+    Branch 修改信息 updateProc
+    Branch 退款 refundProc
+    Branch 退出 exitProc
+    Branch 没有 exitProc
+    Branch 帮助 helpProc
+    Silence silenceProc
+    Default defaultProc
